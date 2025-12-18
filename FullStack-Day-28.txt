@@ -1,0 +1,41 @@
+Day 28:
+==========
+
+1) Local Variable
+=====================
+A local variable is a variable declared inside a function or method.
+It can be accessed only within that function/method and is destroyed once execution ends.
+
+Example:
+def show():
+    x = 10   # local variable
+    print(x)
+
+show()
+# print(x) ❌ NameError
+
+Key Points:
+Scope limited to the function
+Highest priority within the function
+Cannot be accessed outside
+
+
+2) Default Variable (Default Argument)
+=============================================
+A default variable refers to a parameter that has a default value in a function definition.
+If no argument is passed during function call, the default value is used.
+
+Example:
+def greet(name="User"):
+    print(f"Hello {name}")
+
+greet()            # Hello User
+greet("Nikhil")    # Hello Nikhil
+
+Rules:
+Default parameters must come after non-default parameters
+Default values are evaluated once at function definition time
+
+Example (Invalid):
+def fun(a=10, b):   # ❌ Error
+    pass
